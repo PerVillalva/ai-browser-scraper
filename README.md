@@ -4,6 +4,14 @@ This repo shows how to build an AI-powered web scraper using [Browser Use](https
 
 It scrapes dynamic websites like Twitter (X), including pages that rely on JavaScript or require login sessions, and returns structured data with minimal code.
 
+## 📎 Requirements
+
+-   Python 3.8+
+-   Access to an LLM API key (the example is using OpenAI GPT-4o)
+-   Google Chrome installed
+
+---
+
 ## 🚀 What This Project Does
 
 -   Launches your actual Chrome browser (with your cookies & sessions)
@@ -34,42 +42,29 @@ pip install -r requirements.txt
 playwright install
 ```
 
-⸻
+---
 
-🔐 Setup
-	1.	Create a .env file:
+## 🔐 Setup
 
-`touch .env.example .env`
+-   Create a .env file: `touch .env`
+-   Paste your OpenAI API key inside the `.env`: `OPENAI_API_KEY=sk-...`
+-   (Optional) Update your Chrome path inside `main.py` if you’re not on MacOS.
 
+---
 
-	2.	Paste your OpenAI API key inside .env:
+## ▶️ Run It
 
-`OPENAI_API_KEY=sk-...`
-
-
-	3.	(Optional) Update your Chrome path inside main.py if you’re not on MacOS.
-
-⸻
-
-▶️ Run It
-
-python main.py
+`python main.py`
 
 You’ll see:
-	•	A Chrome browser window open on Apify’s X page
-	•	GPT-4o navigating and extracting data from the 3 most recent posts
-	•	Clean output saved to a JSON file:
+• A Chrome browser window open on Apify’s X page
+• GPT-4o navigating and extracting data from the 3 most recent posts
+• Clean output saved to a JSON file:
 
-⸻
+---
 
-🛠 Customize It
-	•	Want to scrape Instagram, Amazon, or Reddit instead? Just change the initial_actions URL and update the prompt.
-	•	Want to run it for multiple profiles? Wrap the task in a loop and switch URLs dynamically.
-	•	Want to extract more data (likes, timestamps)? Update the Pydantic model and your task prompt accordingly.
+## 🛠 Customize It
 
-⸻
-
-📎 Requirements
-	•	Python 3.8+
-	•	Access to an LLM API key (the example is using OpenAI GPT-4o)
-	•	Google Chrome installed
+-   Want to scrape Instagram, Amazon, or Reddit instead? Just change the initial_actions URL and update the prompt.
+-   Want to run it for multiple profiles? Wrap the task in a loop and switch URLs dynamically.
+-   Want to extract more data (likes, timestamps)? Update the Pydantic model and your task prompt accordingly.

@@ -32,19 +32,19 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 playwright install
-
+```
 
 ⸻
 
 🔐 Setup
 	1.	Create a .env file:
 
-touch .env.example .env
+`touch .env.example .env`
 
 
 	2.	Paste your OpenAI API key inside .env:
 
-OPENAI_API_KEY=sk-...
+`OPENAI_API_KEY=sk-...`
 
 
 	3.	(Optional) Update your Chrome path inside main.py if you’re not on MacOS.
@@ -73,4 +73,3 @@ You’ll see:
 	•	Python 3.8+
 	•	Access to an LLM API key (the example is using OpenAI GPT-4o)
 	•	Google Chrome installed
-```
